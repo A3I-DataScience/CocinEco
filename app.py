@@ -3,8 +3,11 @@ import io
 import logging
 import logging.config
 import os
+import sqlite3
 
+import bcrypt
 import streamlit as st
+import streamlit_authenticator as stauth
 from dotenv import load_dotenv
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
@@ -12,6 +15,12 @@ from agents_profiles import all_in_one_agent
 from RAG_agent_definition import init_rag_agent_from_profile
 from supported_countries import supported_countries
 from user_profiles import predefined_profiles
+
+load_dotenv()  # Load environment variables
+
+DATABASE_PATH = os.getenv("DATABASE_PATH")
+OPENAI_KEY = os.getenv("OPENAI_KEY")
+
 
 logger = logging.getLogger("app")
 load_dotenv()
@@ -104,6 +113,7 @@ def send_meal_plan(answer):
 def reset_chat_history():
     st.session_state.chat_history = []
 
+
 def reset_profile(profile_data):
 
     st.session_state.gender = profile_data["gender"]
@@ -121,7 +131,7 @@ def reset_profile(profile_data):
 def update_fields_with_profile(profile_data):
 
     reset_profile(profile_data)
-    
+
     reset_rag_agent(
         temperature=st.session_state.temperature,
         llm_model="gpt-4o-mini",
@@ -194,6 +204,7 @@ def initialize_frontend():
     st.title("CocinEco by A3I-Data Science")
     st.sidebar.empty()
 
+
 def initialize_session():
 
     if "bot_initialized" not in st.session_state:
@@ -244,57 +255,112 @@ def initialize_chatbot():
 
 
 def main():
-    initialize_session()
-    initialize_frontend()
-    initialize_chatbot()
-    number_of_messages = 0
-    number_of_messages_max = 25
 
-    if prompt := st.chat_input():
-        number_of_messages = max(number_of_messages, len(st.session_state.messages))
+    # Define your users
+    # users = [
+    #    {"name": "Antoine", "username": "antoine", "password": bcrypt.hashpw("asdf1234".encode(), bcrypt.gensalt())},
+    #    {"name": "Maria", "username": "maria", "password": bcrypt.hashpw("securepassword2025".encode(), bcrypt.gensalt())},
+    #    {"name": "CocinEcoUser", "username": "cocinecouser", "password": bcrypt.hashpw("cocineco2025".encode(), bcrypt.gensalt())},
+    # ]
 
-        if number_of_messages < 20:
-            with st.chat_message("user"):
-                st.session_state.messages.append({"role": "user", "content": prompt})
-                st.write(prompt)
-                logger.info("User : %s", st.session_state.user_name)
-                logger.info(prompt)
+    def authenticate_user(username, password):
+        conn = sqlite3.connect(DATABASE_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT password_hash FROM users WHERE username = ?", (username,))
+        user = cursor.fetchone()
+        conn.close()
 
-            with st.spinner("Processing..."):
-                answer, context, st.session_state.chat_history = process_prompt(
-                    prompt,
-                    conversational_rag_chain=st.session_state.conversational_rag_chain,
-                    chat_history=st.session_state.chat_history,
-                )
-            if "```" in answer:
-                number_of_messages = number_of_messages_max
-                send_meal_plan(answer)
-                logger.info("Assistant : %s", answer)
-                logger.info("Context : %s", context)
+        if user and bcrypt.checkpw(password.encode(), user[0]):
+            return True
+        return False
 
-                chat_message = "I hope you will find this plan useful ! For my part I am getting tired and will go to sleep until further notice"
+    # Streamlit app layout
+    st.title("CocinEco")
+    st.subheader("the AI powered eco-nutrition assistant")
 
-                st.chat_message("assistant").write(chat_message)
-                st.session_state.messages.append({"role": "assistant", "content": chat_message})
+    menu = ["Login", "CocinEcoBot"]
+    choice = st.sidebar.selectbox("Menu", menu)
 
+    if choice == "Login":
+
+        st.write(
+            "Please login to access CocinEcoBot. To obtain a Username and Password please contact: contact.a3isp@gmail.com."
+        )
+        st.subheader("Login")
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+        if st.button("Login"):
+            user_authenticated = authenticate_user(username, password)
+            if user_authenticated:
+                st.success(f"Welcome, {username}!")
+                st.session_state["authenticated"] = True
             else:
-                st.session_state.messages.append({"role": "assistant", "content": answer})
-                st.chat_message("assistant").write(answer)
-                if debug_mode:
-                    context_str = "Context:\n"
-                    for i, document in enumerate(context):
-                        context_str += f"Document {i}:\nMetadata:\n{str(document.metadata)}\n"
-                        context_str += f"Content:\n{str(document.page_content)}\n\n"
+                st.error("Invalid credentials")
 
-                    st.chat_message("assistant").write(context_str)
-                    st.session_state.messages.append({"role": "assistant", "content": context_str})
-                logger.info("Assistant : %s", answer)
-                logger.info("Context : %s", context)
+    elif choice == "CocinEcoBot":
+        if st.session_state.get("authenticated"):
+            st.subheader("CocinEcoBot")
+
+            initialize_session()
+            initialize_frontend()
+            initialize_chatbot()
+            number_of_messages = 0
+            number_of_messages_max = 25
+
+            if prompt := st.chat_input():
+                number_of_messages = max(number_of_messages, len(st.session_state.messages))
+
+                if number_of_messages < 20:
+                    with st.chat_message("user"):
+                        st.session_state.messages.append({"role": "user", "content": prompt})
+                        st.write(prompt)
+                        logger.info("User : %s", st.session_state.user_name)
+                        logger.info(prompt)
+
+                    with st.spinner("Processing..."):
+                        answer, context, st.session_state.chat_history = process_prompt(
+                            prompt,
+                            conversational_rag_chain=st.session_state.conversational_rag_chain,
+                            chat_history=st.session_state.chat_history,
+                        )
+                    if "```" in answer:
+                        number_of_messages = number_of_messages_max
+                        send_meal_plan(answer)
+                        logger.info("Assistant : %s", answer)
+                        logger.info("Context : %s", context)
+
+                        chat_message = "I hope you will find this plan useful ! For my part I am getting tired and will go to sleep until further notice"
+
+                        st.chat_message("assistant").write(chat_message)
+                        st.session_state.messages.append(
+                            {"role": "assistant", "content": chat_message}
+                        )
+
+                    else:
+                        st.session_state.messages.append({"role": "assistant", "content": answer})
+                        st.chat_message("assistant").write(answer)
+                        if debug_mode:
+                            context_str = "Context:\n"
+                            for i, document in enumerate(context):
+                                context_str += (
+                                    f"Document {i}:\nMetadata:\n{str(document.metadata)}\n"
+                                )
+                                context_str += f"Content:\n{str(document.page_content)}\n\n"
+
+                            st.chat_message("assistant").write(context_str)
+                            st.session_state.messages.append(
+                                {"role": "assistant", "content": context_str}
+                            )
+                        logger.info("Assistant : %s", answer)
+                        logger.info("Context : %s", context)
+                else:
+                    chat_message = "Sorry, I have reached the maximum amount of work I can do in one day. I will go to sleep until further notice!"
+
+                    st.chat_message("assistant").write(chat_message)
+                    st.session_state.messages.append({"role": "assistant", "content": chat_message})
+
         else:
-            chat_message = "Sorry, I have reached the maximum amount of work I can do in one day. I will go to sleep until further notice!"
-
-            st.chat_message("assistant").write(chat_message)
-            st.session_state.messages.append({"role": "assistant", "content": chat_message})
+            st.error("You must log in to view this page.")
 
 
 if __name__ == "__main__":

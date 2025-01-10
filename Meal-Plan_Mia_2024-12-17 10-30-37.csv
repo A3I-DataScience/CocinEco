@@ -1,0 +1,44 @@
+csv
+Day,Meal,Food,Calories,Serving Size,Fats (g),Carbohydrates (g),Sugars (g),Proteins (g),Percent Daily Value (%),Calcium (mg),Iron (mg),Potassium (mg),Fiber (g)
+Monday,Breakfast,Oatmeal with Apples and Walnuts,350,1 bowl,15,50,10,10,20,50,2.5,300,8
+Monday,Snack,Hummus with Carrot Sticks,200,1 serving,10,30,5,5,10,40,1.5,250,5
+Monday,Lunch,Lentil Soup with Kale,400,1 bowl,5,60,5,20,15,80,4,600,10
+Monday,Snack,Roasted Chestnuts,150,1 serving,5,30,5,5,5,10,1.5,200,3
+Monday,Dinner,Stuffed Bell Peppers with Quinoa and Spinach,450,1 pepper,10,70,5,15,20,60,3,500,7
+Total Calories for Monday,,,"1550",,,,,"",,,,,
+Tuesday,Breakfast,Smoothie with Spinach, Banana, and Almond Milk,300,1 glass,5,50,20,5,15,30,2,400,4
+Tuesday,Snack,Apple Slices with Almond Butter,250,1 serving,15,30,15,5,10,50,1,200,4
+Tuesday,Lunch,Quinoa Salad with Beets and Cabbage,400,1 bowl,10,60,10,15,20,70,3,500,8
+Tuesday,Snack,Radishes with Vegan Cream Cheese,150,1 serving,5,20,5,3,5,20,1,150,2
+Tuesday,Dinner,Vegetable Stir-fry with Tofu,500,1 plate,15,60,10,25,25,80,4,600,6
+Total Calories for Tuesday,,,"1600",,,,,"",,,,,
+Wednesday,Breakfast,Chia Pudding with Pears,350,1 bowl,15,40,15,10,15,50,2,300,5
+Wednesday,Snack,Walnuts,200,1 serving,20,5,1,5,5,20,1,150,2
+Wednesday,Lunch,Vegetable Soup with Barley,400,1 bowl,5,60,5,15,10,70,3,500,8
+Wednesday,Snack,Carrot and Cucumber Sticks,100,1 serving,0,20,5,2,2,10,0.5,100,2
+Wednesday,Dinner,Stuffed Squash with Lentils,450,1 squash,10,70,5,15,20,60,3,500,7
+Total Calories for Wednesday,,,"1600",,,,,"",,,,,
+Thursday,Breakfast,Overnight Oats with Berries,350,1 bowl,10,50,15,10,15,50,2,300,5
+Thursday,Snack,Roasted Chickpeas,200,1 serving,5,30,5,10,10,30,2,250,5
+Thursday,Lunch,Brussels Sprouts with Quinoa,400,1 bowl,10,60,5,15,20,70,3,500,8
+Thursday,Snack,Apple Chips,150,1 serving,5,30,10,2,5,20,1,150,2
+Thursday,Dinner,Vegetable Curry with Sweet Potatoes,500,1 plate,15,70,10,20,25,80,4,600,6
+Total Calories for Thursday,,,"1600",,,,,"",,,,,
+Friday,Breakfast,Smoothie Bowl with Spinach and Banana,300,1 bowl,5,50,20,5,15,30,2,400,4
+Friday,Snack,Carrot Muffin,200,1 muffin,10,30,10,5,10,50,1,200,3
+Friday,Lunch,Chickpea Salad with Cabbage,400,1 bowl,10,60,5,15,20,70,3,500,8
+Friday,Snack,Peanut Butter on Rice Cakes,150,2 cakes,5,20,5,5,5,20,1,150,2
+Friday,Dinner,Stuffed Bell Peppers with Rice,450,1 pepper,10,70,5,15,20,60,3,500,7
+Total Calories for Friday,,,"1550",,,,,"",,,,,
+Saturday,Breakfast,Oatmeal with Pears and Cinnamon,350,1 bowl,10,50,15,10,15,50,2,300,5
+Saturday,Snack,Vegetable Sticks with Hummus,200,1 serving,10,30,5,5,10,40,1.5,250,5
+Saturday,Lunch,Lentil Salad with Beets,400,1 bowl,5,60,5,20,15,80,4,600,10
+Saturday,Snack,Roasted Chestnuts,150,1 serving,5,30,5,5,5,10,1.5,200,3
+Saturday,Dinner,Vegetable Stir-fry with Tofu,500,1 plate,15,60,10,25,25,80,4,600,6
+Total Calories for Saturday,,,"1550",,,,,"",,,,,
+Sunday,Breakfast,Chia Pudding with Apples,350,1 bowl,15,40,15,10,15,50,2,300,5
+Sunday,Snack,Walnuts,200,1 serving,20,5,1,5,5,20,1,150,2
+Sunday,Lunch,Vegetable Soup with Barley,400,1 bowl,5,60,5,15,10,70,3,500,8
+Sunday,Snack,Carrot and Cucumber Sticks,100,1 serving,0,20,5,2,2,10,0.5,100,2
+Sunday,Dinner,Stuffed Squash with Lentils,450,1 squash,10,70,5,15,20,60,3,500,7
+Total Calories for Sunday,,,"1600",,,,,"",,,,,

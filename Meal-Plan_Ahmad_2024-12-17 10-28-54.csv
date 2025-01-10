@@ -1,0 +1,44 @@
+csv
+Day,Meal,Food,Calories,Serving Size,Fats (g),Carbohydrates (g),Sugars (g),Proteins (g),Percent Daily Value (%),Calcium (mg),Iron (mg),Potassium (mg),Fiber (g)
+Monday,Breakfast,Oatmeal with Apples and Cinnamon,250,1 cup,5,45,10,6,15,50,1.5,200,5
+Monday,Snack,Carrot Sticks with Hummus,150,1 cup,7,20,5,4,10,40,1.0,150,3
+Monday,Lunch,Quinoa Salad with Kale and Chickpeas,350,1 bowl,10,50,5,15,25,80,3.0,400,8
+Monday,Snack,Walnuts,200,1 oz,18,4,1,5,5,30,0.8,200,2
+Monday,Dinner,Roasted Brussels Sprouts and Potatoes,400,1 plate,15,60,5,10,20,50,2.5,500,8
+Total Calories for Monday,,,"1450",,,,,"",,,,
+Tuesday,Breakfast,Smoothie with Spinach and Pear,300,1 glass,5,60,15,5,10,40,1.0,300,4
+Tuesday,Snack,Cranberries and Nuts,180,1/2 cup,7,25,10,3,8,20,0.5,150,3
+Tuesday,Lunch,Vegetable Soup with Leeks and Carrots,250,1 bowl,8,40,5,8,15,30,1.5,250,5
+Tuesday,Snack,Radishes with Sea Salt,50,1 cup,0,12,2,1,2,10,0.2,50,1
+Tuesday,Dinner,Stuffed Winter Squash with Quinoa,400,1 plate,10,60,5,15,20,60,3.0,450,7
+Total Calories for Tuesday,,,"1260",,,,,"",,,,
+Wednesday,Breakfast,Yogurt with Beetroot and Nuts,300,1 cup,10,30,15,10,15,50,1.0,200,4
+Wednesday,Snack,Apple Slices with Almond Butter,200,1 medium apple,9,25,10,4,8,30,0.5,150,3
+Wednesday,Lunch,Cabbage Salad with Chickpeas,350,1 bowl,10,50,5,15,25,80,2.0,400,8
+Wednesday,Snack,Chestnuts,170,1/2 cup,5,35,5,4,5,20,0.5,100,2
+Wednesday,Dinner,Grilled Cauliflower Steaks with Garlic,400,1 plate,15,50,5,10,20,50,2.5,500,8
+Total Calories for Wednesday,,,"1590",,,,,"",,,,
+Thursday,Breakfast,Oatmeal with Pear and Walnuts,300,1 cup,10,50,10,6,15,50,1.5,200,5
+Thursday,Snack,Carrot Sticks with Hummus,150,1 cup,7,20,5,4,10,40,1.0,150,3
+Thursday,Lunch,Quinoa Salad with Roasted Vegetables,350,1 bowl,10,50,5,15,25,80,3.0,400,8
+Thursday,Snack,Radishes with Sea Salt,50,1 cup,0,12,2,1,2,10,0.2,50,1
+Thursday,Dinner,Roasted Potatoes and Kale,400,1 plate,15,60,5,10,20,50,2.5,500,8
+Total Calories for Thursday,,,"1450",,,,,"",,,,
+Friday,Breakfast,Smoothie with Spinach and Apples,300,1 glass,5,60,15,5,10,40,1.0,300,4
+Friday,Snack,Cranberries and Nuts,180,1/2 cup,7,25,10,3,8,20,0.5,150,3
+Friday,Lunch,Vegetable Soup with Cabbage and Carrots,250,1 bowl,8,40,5,8,15,30,1.5,250,5
+Friday,Snack,Chestnuts,170,1/2 cup,5,35,5,4,5,20,0.5,100,2
+Friday,Dinner,Stuffed Peppers with Quinoa,400,1 plate,10,60,5,15,20,60,3.0,450,7
+Total Calories for Friday,,,"1450",,,,,"",,,,
+Saturday,Breakfast,Yogurt with Beetroot and Nuts,300,1 cup,10,30,15,10,15,50,1.0,200,4
+Saturday,Snack,Apple Slices with Almond Butter,200,1 medium apple,9,25,10,4,8,30,0.5,150,3
+Saturday,Lunch,Cabbage Salad with Chickpeas,350,1 bowl,10,50,5,15,25,80,2.0,400,8
+Saturday,Snack,Walnuts,200,1 oz,18,4,1,5,5,30,0.8,200,2
+Saturday,Dinner,Grilled Cauliflower Steaks with Garlic,400,1 plate,15,50,5,10,20,50,2.5,500,8
+Total Calories for Saturday,,,"1450",,,,,"",,,,
+Sunday,Breakfast,Oatmeal with Apples and Cinnamon,250,1 cup,5,45,10,6,15,50,1.5,200,5
+Sunday,Snack,Carrot Sticks with Hummus,150,1 cup,7,20,5,4,10,40,1.0,150,3
+Sunday,Lunch,Quinoa Salad with Kale and Chickpeas,350,1 bowl,10,50,5,15,25,80,3.0,400,8
+Sunday,Snack,Radishes with Sea Salt,50,1 cup,0,12,2,1,2,10,0.2,50,1
+Sunday,Dinner,Roasted Brussels Sprouts and Potatoes,400,1 plate,15,60,5,10,20,50,2.5,500,8
+Total Calories for Sunday,,,"1450",,,,,"",,,,

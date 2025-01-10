@@ -1,0 +1,50 @@
+
+Day,Meal,Food,Calories,Serving Size,Fats (g),Carbohydrates (g),Sugars (g),Proteins (g),Percent Daily Value (%),Calcium (mg),Iron (mg),Potassium (mg),Fiber (g)
+Monday,Breakfast,Spinach and Feta Omelette,250,1 omelette,18,5,2,15,20,200,2.5,300,3
+Monday,Snack,Apple,95,1 medium,0.3,25,19,0.5,1,10,0.2,195,4
+Monday,Lunch,Quinoa Salad with Broccoli and Lemon,350,1 cup,10,60,2,12,15,50,2.5,400,5
+Monday,Snack,Carrot Sticks with Hummus,150,1 cup,8,20,5,4,5,30,1.5,250,4
+Monday,Dinner,Grilled Chicken with Roasted Brussels Sprouts,400,1 serving,15,30,2,35,25,40,2.5,500,6
+Total Calories for Monday, , , , , , , , , , , , , , 1345
+
+Tuesday,Breakfast,Oatmeal with Pomegranate,300,1 bowl,6,54,12,10,15,40,1.5,300,5
+Tuesday,Snack,Pear,100,1 medium,0.2,27,17,1,1,15,0.3,200,5
+Tuesday,Lunch,Lentil Soup with Kale,350,1 bowl,5,60,5,20,20,60,3,450,8
+Tuesday,Snack,Orange,62,1 medium,0.2,15,12,1,1,50,0.1,250,3
+Tuesday,Dinner,Whole Grain Pasta with Garlic and Fennel,450,1 serving,10,70,3,18,20,30,2.5,400,7
+Total Calories for Tuesday, , , , , , , , , , , , , , 1262
+
+Wednesday,Breakfast,Greek Yogurt with Honey and Apples,250,1 cup,5,30,20,10,15,150,0.5,250,2
+Wednesday,Snack,Carrot Sticks,50,1 cup,0.2,12,6,1,1,30,0.2,200,2
+Wednesday,Lunch,Chickpea Salad with Radicchio,350,1 cup,8,50,5,15,15,60,3,400,6
+Wednesday,Snack,Pomegranate,100,1 medium,0.5,25,15,1,1,20,0.5,150,3
+Wednesday,Dinner,Grilled Fish with Cauliflower,400,1 serving,15,20,2,35,25,40,2.5,500,5
+Total Calories for Wednesday, , , , , , , , , , , , , , 1250
+
+Thursday,Breakfast,Smoothie with Spinach and Banana,300,1 glass,5,60,20,5,10,100,1,300,4
+Thursday,Snack,Orange,62,1 medium,0.2,15,12,1,1,50,0.1,250,3
+Thursday,Lunch,Quinoa Bowl with Roasted Vegetables,350,1 bowl,10,60,5,12,15,40,2.5,400,5
+Thursday,Snack,Pear,100,1 medium,0.2,27,17,1,1,15,0.3,200,5
+Thursday,Dinner,Stuffed Bell Peppers with Lentils,400,1 serving,10,50,3,20,20,30,2.5,450,6
+Total Calories for Thursday, , , , , , , , , , , , , , 1212
+
+Friday,Breakfast,Oatmeal with Apples and Cinnamon,300,1 bowl,6,54,12,10,15,40,1.5,300,5
+Friday,Snack,Carrot Sticks,50,1 cup,0.2,12,6,1,1,30,0.2,200,2
+Friday,Lunch,Chickpea and Spinach Stew,350,1 bowl,8,60,5,15,15,60,3,400,6
+Friday,Snack,Pomegranate,100,1 medium,0.5,25,15,1,1,20,0.5,150,3
+Friday,Dinner,Grilled Chicken with Roasted Potatoes,400,1 serving,15,30,2,35,25,40,2.5,500,6
+Total Calories for Friday, , , , , , , , , , , , , , 1200
+
+Saturday,Breakfast,Greek Yogurt with Honey and Pomegranate,250,1 cup,5,30,20,10,15,150,0.5,250,2
+Saturday,Snack,Apple,95,1 medium,0.3,25,19,0.5,1,10,0.2,195,4
+Saturday,Lunch,Lentil Salad with Carrots and Fennel,350,1 cup,5,60,5,20,20,60,3,400,5
+Saturday,Snack,Orange,62,1 medium,0.2,15,12,1,1,50,0.1,250,3
+Saturday,Dinner,Whole Grain Pasta with Broccoli,450,1 serving,10,70,3,18,20,30,2.5,400,7
+Total Calories for Saturday, , , , , , , , , , , , , , 1207
+
+Sunday,Breakfast,Smoothie with Spinach and Banana,300,1 glass,5,60,20,5,10,100,1,300,4
+Sunday,Snack,Pear,100,1 medium,0.2,27,17,1,1,15,0.3,200,5
+Sunday,Lunch,Quinoa Salad with Roasted Vegetables,350,1 bowl,10,60,5,12,15,40,2.5,400,5
+Sunday,Snack,Carrot Sticks,50,1 cup,0.2,12,6,1,1,30,0.2,200,2
+Sunday,Dinner,Grilled Fish with Cauliflower,400,1 serving,15,20,2,35,25,40,2.5,500,5
+Total Calories for Sunday, , , , , , , , , , , , , , 1200
