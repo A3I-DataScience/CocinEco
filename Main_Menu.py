@@ -10,6 +10,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 import streamlit as st
+from dotenv import load_dotenv
+load_dotenv()
 
 if not os.environ.get("OPENAI_API_KEY"):
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
@@ -101,7 +103,8 @@ def contact_form():
 
 def is_running_on_streamlit_cloud():
     # Check if "is_cloud" exists in secrets and is set to true
-    running_on_cloud = st.secrets.get("general", {}).get("is_cloud", False)
+    #running_on_cloud = st.secrets.get("general", {}).get("is_cloud", False)
+    running_on_cloud = os.getenv("is_cloud")
 
     if running_on_cloud:
         pass
